@@ -1,9 +1,9 @@
-FROM php:7.1-apache
-MAINTAINER docker-web
+FROM php:7.3-apache
 
 RUN apt-get update \
     && apt-get -y install vim wget lsb-release libicu-dev mysql-client libfreetype6-dev libjpeg62-turbo-dev libpng-dev \
-    && docker-php-ext-install pdo_mysql mysqli intl gd
+    && docker-php-ext-install pdo_mysql mysqli intl gd \
+    && rm -r /var/lib/apt/lists/*
 RUN ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load
 RUN ln -s /etc/apache2/mods-available/vhost_alias.load /etc/apache2/mods-enabled
 RUN echo ServerName $HOSTNAME > /etc/apache2/conf-available/fqdn.conf && a2enconf fqdn

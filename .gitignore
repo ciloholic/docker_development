@@ -1,5 +1,6 @@
 /vendor/*
 /db/mysql_data/*
 /html/*
+!.gitkeep
 .htaccess
 .DS_Store

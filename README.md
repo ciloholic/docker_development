@@ -1,8 +1,8 @@
 # 開発環境構成
-- Debian 8.8
-- Apache 2.4
-- PHP 7.1
-- MySQL 5.7
+- Debian 9.9
+- Apache 2.4.25
+- PHP 7.3.6
+- MySQL 8.0.16
 
 # ディレクトリ構成
 - html
@@ -49,7 +49,7 @@ html配下がドキュメントルートになります。
 **port:8080**も**docker-compose.yml**内の**ports**で変更可能です。
 ```
 例) html配下にsampleプロジェクトを作成した場合
-http://sample.localhost:8080/
+http://sample.lvh.me:8080/
 ```
 
 # その他コマンド
